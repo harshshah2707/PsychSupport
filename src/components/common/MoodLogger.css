@@ -1,0 +1,50 @@
+/* Mood Logger styles */
+.mood-logger {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.mood-logger h3 {
+  margin-top: 0;
+}
+
+.mood-selector {
+  margin: 12px 0;
+}
+
+.mood-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.mood-emoji {
+  font-size: 24px;
+}
+
+.mood-label {
+  font-weight: 600;
+}
+
+.mood-slider {
+  width: 100%;
+}
+
+.mood-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mood-notes {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+}
+

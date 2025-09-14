@@ -1,0 +1,246 @@
+/* Breathing Exercise Styles */
+.breathing-exercise {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #7dd3fc;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.breathing-header h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #0c4a6e;
+}
+
+.breathing-header p {
+  color: #075985;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.technique-selector {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.technique-selector label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0c4a6e;
+}
+
+.technique-selector select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #7dd3fc;
+  border-radius: 8px;
+  background: white;
+  font-size: 16px;
+}
+
+.technique-description {
+  font-size: 14px;
+  color: #075985;
+  margin: 8px 0 0 0;
+  font-style: italic;
+}
+
+.breathing-container {
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breathing-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 32px rgba(79, 70, 229, 0.3);
+  margin-bottom: 24px;
+}
+
+.breathing-text {
+  font-size: 48px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.breathing-instruction {
+  text-align: center;
+}
+
+.breathing-instruction h4 {
+  font-size: 20px;
+  margin: 0 0 16px 0;
+  color: #0c4a6e;
+  font-weight: 600;
+}
+
+.breathing-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.seconds {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0369a1;
+  line-height: 1;
+}
+
+.cycle {
+  font-size: 14px;
+  color: #075985;
+  font-weight: 500;
+}
+
+.completion-message {
+  background: white;
+  border: 1px solid #10b981;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+.completion-message h4 {
+  margin-top: 0;
+  color: #065f46;
+}
+
+.completion-message ul {
+  margin-bottom: 0;
+}
+
+.completion-message li {
+  margin-bottom: 4px;
+  color: #047857;
+}
+
+.breathing-controls {
+  margin-top: 24px;
+}
+
+.cycle-selector {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.cycle-selector label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0c4a6e;
+}
+
+.cycle-selector select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #7dd3fc;
+  border-radius: 8px;
+  background: white;
+  font-size: 16px;
+}
+
+.breathing-start,
+.breathing-stop {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.breathing-start {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.breathing-start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.breathing-stop {
+  background: #f87171;
+  color: white;
+  border: none;
+}
+
+.breathing-stop:hover {
+  background: #ef4444;
+}
+
+.completion-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.completion-actions button {
+  flex: 1;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Animation for the breathing circle */
+@keyframes breathe-pulse {
+  0%, 100% { transform: scale(0.9); }
+  50% { transform: scale(1.1); }
+}
+
+.breathing-circle.pulsing {
+  animation: breathe-pulse 4s infinite ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .breathing-exercise {
+    padding: 16px;
+  }
+  
+  .breathing-circle {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .breathing-text {
+    font-size: 36px;
+  }
+  
+  .seconds {
+    font-size: 36px;
+  }
+  
+  .breathing-instruction h4 {
+    font-size: 18px;
+  }
+  
+  .completion-actions {
+    flex-direction: column;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .breathing-circle {
+    transition: none;
+  }
+  
+  .breathing-circle.pulsing {
+    animation: none;
+  }
+}

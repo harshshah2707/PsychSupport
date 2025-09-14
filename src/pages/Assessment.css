@@ -1,0 +1,162 @@
+/* Assessment page styles */
+.assessment {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.assessment-progress {
+  height: 8px;
+  background: #eef2ff;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--primary);
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.assessment-content h2 {
+  margin: 0 0 16px 0;
+}
+
+.question-counter {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.question-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.scale-input {
+  margin-top: 16px;
+}
+
+.scale-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.scale-slider {
+  width: 100%;
+}
+
+.scale-value {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.multiple-choice .option-label,
+.checkbox-group .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.assessment-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.assessment-completed {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 24px;
+}
+
+.assessment-results {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  margin: 16px 0;
+}
+
+.score-display {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.score-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.score-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.score-interpretation h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+}
+
+.score-interpretation p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.assessment-summary {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.assessment-summary p {
+  margin: 4px 0;
+}
+
+.action-buttons-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .score-display {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .action-buttons-row {
+    flex-direction: column;
+  }
+}
+
