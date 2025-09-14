@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom'; // <-- added
 import './Profile.css';
 
 const Profile = () => {
   const { user, updateUser } = useAuth();
+  const navigate = useNavigate(); // <-- added
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     name: user?.name || '',
@@ -60,6 +62,8 @@ const Profile = () => {
       </div>
 
       <div className="profile-content">
+
+        {/* Personal Information Section */}
         <div className="profile-section">
           <div className="section-header">
             <h2>Personal Information</h2>
@@ -108,9 +112,9 @@ const Profile = () => {
           </div>
         </div>
 
+        {/* Preferences Section */}
         <div className="profile-section">
           <h2>Preferences</h2>
-          
           <div className="preferences-form">
             <div className="form-group">
               <label className="checkbox-label">
@@ -162,6 +166,19 @@ const Profile = () => {
           </div>
         </div>
 
+        {/* Booking History Section */}
+        <div className="profile-section bookings-section">
+          <h2>My Bookings</h2>
+          <p>View your past booked sessions.</p>
+          <button
+            className="btn-primary"
+            onClick={() => navigate("/bookings/history")}
+          >
+            View Booking History
+          </button>
+        </div>
+
+        {/* Account Statistics Section */}
         <div className="profile-section">
           <h2>Account Statistics</h2>
           <div className="stats-grid">
@@ -184,6 +201,7 @@ const Profile = () => {
           </div>
         </div>
 
+        {/* Account Management Section */}
         <div className="profile-section danger-zone">
           <h2>Account Management</h2>
           <div className="danger-actions">
@@ -194,6 +212,7 @@ const Profile = () => {
             These actions cannot be undone. Please proceed with caution.
           </p>
         </div>
+
       </div>
     </div>
   );

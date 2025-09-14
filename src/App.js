@@ -11,7 +11,8 @@ import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Navbar from './components/Navbar';
 import './styles/App.css';
-
+import SlotBooking from "./components/bookings/SlotBooking";
+import BookingsHistory from "./components/bookings/BookingsHistory";
 function App() {
   return (
     <ThemeProvider>
@@ -32,6 +33,8 @@ function App() {
                   <Assessment />
                 </ProtectedRoute>
               } />
+              <Route path="/bookings" element={<SlotBooking />} />
+              <Route path="/bookings/history" element={<BookingsHistory />} />
               <Route path="/resources" element={
                 <ProtectedRoute>
                   <Resources />
