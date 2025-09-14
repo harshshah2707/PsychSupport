@@ -1,0 +1,115 @@
+.slot-booking {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.slot-booking h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.booking-form input[type="date"] {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.slots {
+  margin: 1.5rem 0;
+}
+
+.slots h4 {
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.slot-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.slot-option {
+  background: #f9f9f9;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.slot-option:hover {
+  background: #eef6ff;
+  border-color: #007bff;
+}
+
+.slot-option input {
+  accent-color: #007bff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-secondary {
+  background: #f1f1f1;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+  background: #ddd;
+}
+
+.confirmation {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.confirmation h3 {
+  color: green;
+  margin-bottom: 1rem;
+}
+
+.confirmation p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #444;
+}
